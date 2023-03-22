@@ -548,10 +548,10 @@ if (!process.server) {
                             class="text-xs text-white/50 mb-1"
                         >
                             <template v-if="message.role === 'bot'">
-                                {{ activePresetToUse?.options?.clientOptions?.chatGptLabel || 'AI' }}
+                                {{ activePresetToUse?.options?.clientOptions?.chatGptLabel || activePresetToUse?.name || 'AI' }}
                             </template>
                             <template v-else-if="message.role === 'user'">
-                                {{ activePresetToUse?.options?.clientOptions?.userLabel || 'User' }}
+                                {{ activePresetToUse?.options?.clientOptions?.userLabel || 'You' }}
                             </template>
                             <template v-else>
                                 {{ message.role }}

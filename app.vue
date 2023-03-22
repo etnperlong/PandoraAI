@@ -89,13 +89,13 @@ onMounted(() => {
                 <!-- Title -->
                 <h1 class="text-2xl font-bold text-white/80 drop-shadow-md">Pandora<span class="font-light">AI</span></h1>
             </header>
-            <main class="flex flex-grow py-2">
+            <main class="flex flex-grow py-2 pb-6">
                 <Chat/>
             </main>
-            <footer class="px-3 pb-6 text-center">
-                <span class="text-xs font-light text-slate-400">
+            <footer class="px-3 text-center">
+                <span class="text-xs font-light text-slate-600">
                     powered by
-                    <a href="https://github.com/waylaidwanderer/node-chatgpt-api" target="_blank">
+                    <a class="text-xs font-light text-slate-600" href="https://github.com/waylaidwanderer/node-chatgpt-api" target="_blank">
                         https://github.com/waylaidwanderer/node-chatgpt-api
                     </a>
                 </span>
@@ -132,9 +132,9 @@ body {
 
 footer a {
     @apply opacity-75 hover:opacity-100 transition duration-300 ease-in-out;
-    background: linear-gradient(to right, #37feff 0%, #bd7bff 100%);
+    /** background: linear-gradient(to right, #37feff 0%, #bd7bff 100%); **/
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /** -webkit-text-fill-color: transparent; **/
 }
 
 .fade-enter-active,
