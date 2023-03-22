@@ -35,13 +35,6 @@ onMounted(() => {
 </script>
 
 <template>
-    <a
-        href="https://github.com/waylaidwanderer/PandoraAI"
-        target="_blank"
-        id="fork-corner"
-        class="fork-corner fc-size-small fc-pos-tr fc-animate fc-theme-github"
-        title="Fork me on GitHub"
-    ></a>
     <div class="flex flex-row min-h-screen text-slate-300">
         <AppSidebar/>
         <Transition name="fade">
@@ -92,14 +85,6 @@ onMounted(() => {
             <main class="flex flex-grow py-2 pb-6">
                 <Chat/>
             </main>
-            <footer class="px-3 text-center">
-                <span class="text-xs font-light text-slate-600">
-                    powered by
-                    <a class="text-xs font-light text-slate-600" href="https://github.com/waylaidwanderer/node-chatgpt-api" target="_blank">
-                        https://github.com/waylaidwanderer/node-chatgpt-api
-                    </a>
-                </span>
-            </footer>
         </div>
     </div>
 </template>

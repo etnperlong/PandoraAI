@@ -33,14 +33,14 @@ export default defineNuxtConfig({
         meta: {
             name: 'PandoraAI',
             description: 'Multiple AI Web Chat Client',
-            theme_color: '#7733ff',
+            theme_color: '#050872',
             mobileAppIOS: true,
             nativeUI: true,
         },
         manifest: {
             name: 'PandoraAI',
             description: 'Multiple AI Web Chat Client',
-            background_color: '#7733ff',
+            background_color: '#050872',
             lang: 'en',
             useWebmanifestExtension: false,
         },

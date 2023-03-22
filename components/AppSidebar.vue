@@ -254,6 +254,18 @@ const updateConversationTitleHandler = (event) => {
             <div class="flex gap-3 items-center w-full">
                 <AppData/>
             </div>
+            <div class="flex gap-3 items-center w-full">
+                <span class="text-xs font-light text-slate-400">
+                    Powered by
+                    <a class="text-xs font-light text-slate-400 underline" href="https://github.com/waylaidwanderer/node-chatgpt-api" target="_blank">
+                        node-chatgpt-api
+                    </a>
+                    <span class="text-xs font-light text-slate-400">&nbsp;/ </span>
+                    <a class="text-xs font-light text-slate-400 underline" href="https://github.com/waylaidwanderer/PandoraAI" target="_blank">
+                        PandoraAI
+                    </a>
+                </span>
+            </div>
         </div>
     </div>
 </template>
