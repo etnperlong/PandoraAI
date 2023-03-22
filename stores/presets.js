@@ -1,13 +1,5 @@
 export const usePresetsStore = defineStore('presetsStore', () => {
-    const presets = useLocalStorage('presetsStore/presets', [
-        {
-            name: 'Bing (GPT-4)',
-            client: 'bing',
-            options: {
-                jailbreakMode: true,
-            },
-        },
-    ]);
+    const presets = useLocalStorage('presetsStore/presets', []);
     const activePresetName = useLocalStorage('presetsStore/activePresetName', 'bing');
     const activePreset = computed(() => getPreset(activePresetName.value));
 
