@@ -25,7 +25,7 @@ const props = defineProps({
 
 const presetsStore = usePresetsStore();
 const { presets } = storeToRefs(presetsStore);
-const customPresets = computed(() => presets.value.filter(preset => !['OpenAI API', 'ChatGPT', 'Bing'].includes(preset.name)));
+const customPresets = computed(() => presets.value.filter(preset => !['OpenAI (GPT-3.5)', 'ChatGPT', 'Bing (GPT-4)'].includes(preset.name)));
 
 const setClientToUseHandler = (clientName) => {
     if (props.canChangePreset) {
@@ -83,7 +83,7 @@ onMounted(() => {
                     @click="setClientToUseHandler('chatgpt')"
                 >
                     <GPTIcon class="h-9 py-2 pr-2 rounded-lg" />
-                    OpenAI API
+                    OpenAI (GPT-3.5)
                 </button>
                 <button
                     class="hover:bg-white/20 px-3 py-1 flex items-center transition ease-in-out"
@@ -123,7 +123,7 @@ onMounted(() => {
                     @click="setClientToUseHandler('bing')"
                 >
                     <BingIcon class="h-9 py-2 pr-2 rounded-lg" />
-                    Bing
+                    Bing (GPT-4)
                 </button>
                 <button
                     class="hover:bg-white/20 px-3 py-1 flex items-center transition ease-in-out border-t border-white/5"

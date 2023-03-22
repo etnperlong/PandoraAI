@@ -156,7 +156,7 @@ const availableOptions = {
         },
         jailbreakMode: {
             type: 'checkbox',
-            label: 'Jailbreak Mode',
+            label: 'Bing Sydney Mode',
         },
         toneStyle: {
             type: 'select',
@@ -211,11 +211,11 @@ const defaultSaveAsName = computed(() => {
     }
     switch (props.client) {
         case 'chatgpt':
-            return 'OpenAI API';
+            return 'OpenAI (GPT-3.5)';
         case 'chatgpt-browser':
             return 'ChatGPT';
         case 'bing':
-            return 'Bing';
+            return 'Bing (GPT-4)';
         default:
             throw new Error('Invalid client');
     }

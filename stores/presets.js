@@ -1,6 +1,14 @@
 export const usePresetsStore = defineStore('presetsStore', () => {
-    const presets = useLocalStorage('presetsStore/presets', []);
-    const activePresetName = useLocalStorage('presetsStore/activePresetName', 'chatgpt');
+    const presets = useLocalStorage('presetsStore/presets', [
+        {
+            name: 'Bing (GPT-4)',
+            client: 'bing',
+            options: {
+                jailbreakMode: true,
+            },
+        },
+    ]);
+    const activePresetName = useLocalStorage('presetsStore/activePresetName', 'bing');
     const activePreset = computed(() => getPreset(activePresetName.value));
 
     function setActivePresetName(name) {
@@ -35,13 +43,13 @@ export const usePresetsStore = defineStore('presetsStore', () => {
         let nameToUse;
         switch (name) {
             case 'chatgpt':
-                nameToUse = 'OpenAI API';
+                nameToUse = 'OpenAI (GPT-3.5)';
                 break;
             case 'chatgpt-browser':
                 nameToUse = 'ChatGPT';
                 break;
             case 'bing':
-                nameToUse = 'Bing';
+                nameToUse = 'Bing (GPT-4)';
                 break;
             default:
                 nameToUse = name;
