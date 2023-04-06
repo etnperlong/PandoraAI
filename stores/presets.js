@@ -34,9 +34,6 @@ export const usePresetsStore = defineStore('presetsStore', () => {
     function getPreset(name) {
         let nameToUse;
         switch (name) {
-            case 'chatgpt':
-                nameToUse = 'OpenAI (GPT-3.5)';
-                break;
             case 'chatgpt-browser':
                 nameToUse = 'ChatGPT';
                 break;
